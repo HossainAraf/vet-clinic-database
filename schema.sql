@@ -1,4 +1,4 @@
-/* Database schema to keep the structure of the entire database. */
+--CREATE TABLE
 
 CREATE TABLE animals (
   id INT PRIMARY KEY,
@@ -8,3 +8,7 @@ CREATE TABLE animals (
   neutered BOOLEAN,
   weight_kg DECIMAL
 );
+
+--ADD NEW COLUMN
+ALTER TABLE animals
+ADD COLUMN species VARCHAR;
