@@ -25,3 +25,11 @@ CREATE TABLE species (
   id INT PRIMARY KEY,
   name VARCHAR(255)
 );
+
+--MODIFY ANIMAL TABLE
+-- Modify the animals table
+ALTER TABLE animals
+  ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY,
+  DROP COLUMN species,
+  ADD COLUMN species_id INT REFERENCES species(id),
+  ADD COLUMN owner_id INT REFERENCES owners(id);
