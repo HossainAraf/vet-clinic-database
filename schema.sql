@@ -28,7 +28,7 @@ CREATE TABLE species (
 
 --MODIFY ANIMAL TABLE
 ALTER TABLE animals
- DROP COLUMN species,
+DROP COLUMN species,
 
 ALTER TABLE animals
 ADD COLUMN species_id INT,
