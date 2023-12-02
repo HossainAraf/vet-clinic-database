@@ -128,3 +128,9 @@ JOIN species ON animals.species_id = species.id
 JOIN owners ON animals.owner_id = owners.id
 WHERE species.name = 'Digimon' AND owners.full_name = 'Jennifer Orwell';
 
+--animals owned by Dean Winchester that haven't tried to escape.
+SELECT a.name AS animal_name
+FROM animals AS a
+JOIN owners AS o ON a.owner_id = o.id
+WHERE o.full_name = 'Dean Winchester' AND a.escape_attempts = 0;
+
