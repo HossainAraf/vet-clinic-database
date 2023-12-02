@@ -116,3 +116,9 @@ FROM species
 LEFT JOIN animals ON species.id = animals.species_id
 GROUP BY species.name;
 
+--all owners and their animals, remember to include those that don't own any animal
+SELECT owners.full_name, animals.name AS animal_name
+FROM owners
+LEFT JOIN animals ON owners.id = animals.owner_id;
+
+--
