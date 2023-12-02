@@ -121,4 +121,10 @@ SELECT owners.full_name, animals.name AS animal_name
 FROM owners
 LEFT JOIN animals ON owners.id = animals.owner_id;
 
---
+--Digimon owned by Jennifer Orwell
+SELECT animals.name AS digimon_name
+FROM animals
+JOIN species ON animals.species_id = species.id
+JOIN owners ON animals.owner_id = owners.id
+WHERE species.name = 'Digimon' AND owners.full_name = 'Jennifer Orwell';
+
