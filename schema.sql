@@ -42,12 +42,17 @@ ADD CONSTRAINT fk_owner
 FOREIGN KEY (owner_id)
 REFERENCES owners(id);
 
---create table vet
-CREATE TABLE vet (
+--create table vets
+CREATE TABLE vets (
   id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
   name VARCHAR(255),
   age INT,
   date_of_graduation DATE
 );
 
--
+--create tabble specialization
+CREATE TABLE specialization (
+  vet_id INT REFERENCES vets(id),
+  species_id INT REFERENCES species(id),
+  CONSTRAINT specialization_pk PRIMARY KEY (vet_id, species_id)
+);
