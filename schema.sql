@@ -56,3 +56,11 @@ CREATE TABLE specialization (
   species_id INT REFERENCES species(id),
   CONSTRAINT specialization_pk PRIMARY KEY (vet_id, species_id)
 );
+
+--create table visits
+CREATE TABLE visits (
+  animals_id INT REFERENCES animals(id),
+  vets_id INT REFERENCES vets(id),
+  date_of_visit DATE,
+  CONSTRAINT visits_pk PRIMARY KEY (animals_id, vets_id, date_of_visit)
+);
