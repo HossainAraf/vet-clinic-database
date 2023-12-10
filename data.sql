@@ -42,3 +42,41 @@ SET owner_id =
         WHEN name IN ('Angemon', 'Boarmon') THEN 5
         ELSE NULL
     END;
+
+
+INSERT INTO vets (name, age, date_of_graduation)
+VALUES
+    ('Vet William Thatcher', 45, '2000-04-23'),
+    ('Vet Maisy Smith', 26, '2019-01-17'),
+    ('Vet Stephanie Mendez', 64, '1981-05-04'),
+    ('Vet Jack Harkness', 38, '2008-06-08');
+
+INSERT INTO specializations (vet_id, species_id)
+VALUES
+    (1, 1), 
+    (3, 1), 
+    (3, 2), 
+    (4, 2);
+
+INSERT INTO visits (vets_id, animals_id, date_of_visit)
+VALUES
+    (1, 1, '2020-05-24'), 
+    (3, 1, '2020-07-22'), 
+    (4, 2, '2021-02-02'), 
+    (2, 3, '2020-01-05'), 
+    (2, 3, '2020-03-08'), 
+    (2, 3, '2020-05-14'), 
+    (3, 4, '2021-05-04'), 
+    (4, 5, '2021-02-24'), 
+    (2, 6, '2019-12-21'), 
+    (1, 6, '2020-08-10'), 
+    (2, 6, '2021-04-07'), 
+    (3, 7, '2019-09-29'),
+    (4, 8, '2020-10-03'), 
+    (4, 8, '2020-11-04'), 
+    (2, 9, '2019-01-24'), 
+    (2, 9, '2019-05-15'), 
+    (2, 9, '2020-02-27'), 
+    (2, 9, '2020-08-03'), 
+    (3, 10, '2020-05-24'), 
+    (1, 10, '2021-01-11'); 
